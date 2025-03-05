@@ -15,6 +15,7 @@ s_textWrapper.addEventListener('mouseenter', () => {
         console.log('done')
         s_loadingPage.classList.add('hidden')
         s_loginPage.classList.remove('hidden')
+        console.log(123)
     }, s_loadingBarTime)
 })
 
