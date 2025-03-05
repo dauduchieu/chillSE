@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #080c1a;
+}
+
+.page {
+    height: 100%;
+    width: 100%;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    font-size: 10em;
+    font-weight: bolder;
+}
+
+.text-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.text-wrapper > * {
+    width: 120px;
+    text-align: center;
+    /* background-color: orange; */
+    /* border: 1px solid black; */
+}
+
+.description {
+    font-size: .15em;
+    opacity: 0;
+    transition: .5s;
+}
+
+.guide {
+    font-size: .1em;
+    opacity: 1;
+    transition: .1s;
+}
+
+.i, .s, .e {
+    color: #ffee00;
+}
+
+.c, .h, .l {
+    width: 0;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+.text-wrapper:hover > .c,
+.text-wrapper:hover > .h,
+.text-wrapper:hover > .l {
+    width: 100px;
+    opacity: 1;
+}
+
+.text-wrapper:hover > .c,
+.text-wrapper:hover > .h,
+.text-wrapper:hover > .l,
+.text-wrapper:hover > .i {
+    color: #fff;
+}
+
+.text-wrapper:hover ~ .description {
+    opacity: 1;
+}
+
+.text-wrapper:hover ~ .guide {
+    opacity: 0;
+}
+
+.text-wrapper:hover ~ .bar {
+    width: 40%;
+    transition: .2s linear;
+}
+
+.bar {
+    width: 0%;
+    height: 5px;
+    background-color: #fff;
+}
+
+.bar .inner {
+    height: 100%;
+    width: 0%;
+    background-color: #ffee00;
+    border-right: 2px solid #000;
+}
+
+.hidden {
+    display: none;
+}
