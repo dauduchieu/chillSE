@@ -14,6 +14,16 @@
 .page {
     height: 100%;
     width: 100%;
+    animation: page-show .5s linear 1 forwards;
+}
+
+@keyframes page-show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .loading {
@@ -26,7 +36,7 @@
     font-weight: bolder;
 }
 
-.text-wrapper {
+.loading .text-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,13 +50,13 @@
     /* border: 1px solid black; */
 }
 
-.description {
+.loading .description {
     font-size: .15em;
     opacity: 0;
     transition: .5s;
 }
 
-.guide {
+.loading .guide {
     font-size: .1em;
     opacity: 1;
     transition: .1s;
@@ -89,18 +99,31 @@
     transition: .2s linear;
 }
 
-.bar {
+.loading .bar {
     width: 0%;
     height: 5px;
     background-color: #fff;
 }
 
-.bar .inner {
+.loading .bar .inner {
     height: 100%;
     width: 0%;
     background-color: #ffee00;
     border-right: 2px solid #000;
 }
+
+
+.login {
+    background-color: #12081a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login h1 {
+    color: #fff;
+}
+
 
 .hidden {
     display: none;
